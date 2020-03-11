@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="..\HackChecker\CheckFile.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HackChecker\HashItcpp.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="..\HackChecker\Hash.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HackChecker\VirusChecker.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="headers">
+      <UniqueIdentifier>{dde5c0be-5f89-4a7a-bf8c-72e991bfe834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{c45629ed-6271-4934-b693-200a714bfd54}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
