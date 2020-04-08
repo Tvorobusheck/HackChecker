@@ -12,14 +12,20 @@ struct signature {
 	unsigned int size;
 	unsigned int hash;
 };
-class SuspectedFile {
-public:
-	SuspectedFile(string);
-	bool load(string);
-	bool close();
-	bool checkFile();
-	string get_path();
-private:
+
+class File {
+protected:
 	string path;
 	FILE * file;
+public:
+	File(string);
+	bool load(string);
+	bool close();
+	string get_path();
+};
+
+class SuspectedFile : public File{
+public:
+	bool checkFile();
+	SuspectedFile(string);
 };

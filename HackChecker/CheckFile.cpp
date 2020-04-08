@@ -3,15 +3,19 @@
 #include <iostream>
 using namespace std;
 
-SuspectedFile::SuspectedFile(string path) {
+File::File(string path) {
 	this->load(path);
 }
 
-string SuspectedFile::get_path() {
+SuspectedFile::SuspectedFile(string path) : File{ path } {
+	
+}
+
+string File::get_path() {
 	return this->path;
 }
 
-bool SuspectedFile::load(string path) {
+bool File::load(string path) {
 	FILE * file = fopen(path.c_str(), "rb");
 	if (file == NULL) {
 		cerr << "Error! Can't open file at: " << path << endl;
@@ -22,7 +26,7 @@ bool SuspectedFile::load(string path) {
 	return true;
 }
 
-bool SuspectedFile::close() {
+bool File::close() {
 	return fclose(file);
 }
 
