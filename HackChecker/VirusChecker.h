@@ -13,6 +13,8 @@ struct signature {
 	unsigned int hash;
 };
 
+
+// STATE pattern - шаблон состояния, базовый класс - File, поведение - SuspectedFile
 class File {
 protected:
 	string path;

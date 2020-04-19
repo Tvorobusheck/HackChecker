@@ -3,6 +3,10 @@
 #include <iostream>
 using namespace std;
 
+// SpecialCase pattern - проверка NULL
+// IdentityMap pattern - сохраняю значения вычислений, а потом использую
+// PUBSUB pattern - сообщения отправляются в стандартный поток вывода и в поток вывода ошибок
+
 File::File(string path) {
 	this->load(path);
 }
@@ -32,6 +36,10 @@ bool File::close() {
 
 bool SuspectedFile::checkFile() {
 	FILE * file = this->file;
+	if (file == NULL) {
+		cerr << "Error! Can't open suspected file: " << this->get_path() << endl;
+		return false;
+	}
 	char buffer[MAX_FILE_SIZE];
 	int size_of_file = fread(buffer, MAX_FILE_SIZE, 1, file);
 	FILE * signatures_file = fopen(PATH_TO_SIGNATURES, "r");
