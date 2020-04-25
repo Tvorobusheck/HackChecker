@@ -1,5 +1,4 @@
-
-#include "pch.h"
+#include "stdafx.h"
 #include "Hash.h"
 
 void ByteHash::hash_it(const char * text, int size) {

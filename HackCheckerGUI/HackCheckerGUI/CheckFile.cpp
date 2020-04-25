@@ -1,8 +1,8 @@
-#include "pch.h"
+#include "stdafx.h"
 #include "VirusChecker.h"
 #include <iostream>
 using namespace std;
-
+#define _CRT_SECURE_NO_WARNINGS
 // SpecialCase pattern - проверка NULL
 // IdentityMap pattern - сохраняю значения вычислений, а потом использую
 // PUBSUB pattern - сообщения отправляются в стандартный поток вывода и в поток вывода ошибок
@@ -67,6 +67,7 @@ bool SuspectedFile::checkFile() {
 	int size_of_file = fread(buffer, MAX_FILE_SIZE, 1, file);
 	FILE * signatures_file = fopen(PATH_TO_SIGNATURES, "r");
 	if (signatures_file == NULL) {
+		MessageBoxA(0, PATH_TO_SIGNATURES, "NOT FOUND", 0);
 		cerr << "Error! Can't open signature file at: " << PATH_TO_SIGNATURES<< endl;
 		return false;
 	}

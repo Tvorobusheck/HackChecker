@@ -4,8 +4,8 @@
 
 using namespace std;
 
-#define MAX_FILE_SIZE 300 * 1024 * 1024
-#define PATH_TO_SIGNATURES "../HackChecker/signatures.txt"
+#define MAX_FILE_SIZE 300 * 1024
+#define PATH_TO_SIGNATURES "D:/Data/HackChecker/HackCheckerGUI/HackCheckerGUI/signatures.txt"
 
 struct signature {
 	unsigned int offset;
