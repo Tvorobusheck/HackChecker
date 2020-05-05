@@ -33,6 +33,18 @@
     <ClInclude Include="VirusChecker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SignatureChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SignatureUpdater.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SignatureVersionGetter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SignatureVersionSeter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

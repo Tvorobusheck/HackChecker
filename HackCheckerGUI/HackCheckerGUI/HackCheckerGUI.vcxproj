@@ -170,6 +170,10 @@
     <ClInclude Include="HackCheckerGUI.h" />
     <ClInclude Include="Hash.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SignatureChecker.h" />
+    <ClInclude Include="SignatureUpdater.h" />
+    <ClInclude Include="SignatureVersionGetter.h" />
+    <ClInclude Include="SignatureVersionSeter.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="VirusChecker.h" />

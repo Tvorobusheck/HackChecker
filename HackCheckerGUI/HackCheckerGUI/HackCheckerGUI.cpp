@@ -5,6 +5,8 @@
 #include <windows.h>
 #include "HackCheckerGUI.h"
 #include "VirusChecker.h"
+#include "SignatureChecker.h"
+#include "SignatureUpdater.h"
 #include <commdlg.h>
 
 
@@ -26,6 +28,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ LPWSTR    lpCmdLine,
                      _In_ int       nCmdShow)
 {
+
+	if (check_version()) {
+		update();
+	}
+
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
